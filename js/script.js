@@ -37,6 +37,10 @@ function addTodo(event) {
 		emptyTodo.classList.add('empty-todo-item');
 		emptyTodo.innerHTML = '<p>You did not enter what to do</p>';
 		todoList.prepend(emptyTodo);
+
+		setTimeout(() => {
+			emptyTodo.remove();
+		}, 1000);
 	}
 
 	todoIinput.value = '';
@@ -49,7 +53,6 @@ function checkDelete(event) {
 		todo.addEventListener('transitionend', () => {
 			todo.remove();
 		});
-
 	}
 
 	if (event.target.classList.contains('complete-button')) {
