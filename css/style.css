@@ -1,0 +1,109 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	min-height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #000;
+	background-image: linear-gradient(120deg, #ffcc00, #cc6633);
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+header {
+	margin-top: 30px;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	margin: 30px 0 30px 0;
+}
+
+.todo-input {
+	min-width: 50%;
+	padding: 5px;
+	border-radius: 10px 0 0 10px;
+	outline: none;
+}
+
+.todo-button {
+	padding: 10px;
+	border-radius: 0 10px 10px 0;
+	color: #fff;
+	background-color: #333;
+	cursor: pointer;
+}
+
+.todo-button:hover {
+	background-color: #cc6633;
+	transition: 0.3s;
+}
+
+.todo {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border: 1px solid #333;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+.empty-todo-item {
+	margin: 10px 0;
+	padding: 5px;
+	border: 1px dotted #cc0000;
+	border-radius: 5px;
+	color: #cc0000;
+	text-align: center;
+}
+
+.todo-item {
+	word-break: break-word;
+	text-align: justify;
+}
+
+.todo:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.complete-button, .trash-button {
+	width: 70px;
+	cursor: pointer;
+	text-align: left;
+	background-color: transparent;
+}
+
+.complete-button {
+	margin-right: 15px;
+	color: #009900;
+}
+
+.trash-button {
+	color: #990000;
+}
+
+.todo.completed .todo-item {
+	text-decoration: line-through;
+	opacity: 0.3;
+	transition: all 0.3s ease;
+}
+
+.deleted {
+	transform: translateY(100px);
+	opacity: 0;
+}
